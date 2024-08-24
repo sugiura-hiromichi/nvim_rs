@@ -1,4 +1,4 @@
-#![allow(unused_imports, dead_code)]
+#![allow(unused_variables,unused_imports, dead_code, unreachable_code)]
 use nvim_oxi::api::get_option_value;
 use nvim_oxi::api::opts::OptionOpts;
 use nvim_oxi::api::set_option_value;
@@ -7,7 +7,7 @@ use nvim_oxi::Object;
 use nvim_oxi::ObjectKind;
 
 fn o_o() -> Result<(), nvim_oxi::api::Error,> {
-	let mut opts = OptionOpts::builder();
+	let opts = OptionOpts::builder();
 	let light = "light".to_object();
 	panic!("🫠-----------------------🫠");
 	set_option_value("background", light, &opts.build(),)
