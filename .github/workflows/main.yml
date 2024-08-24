@@ -9,5 +9,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions-rust-lang/setup-rust-toolchain@v1
-      - run: apt-get update && apt-get install -y neovim
+      - uses: rhysd/action-setup-vim@v1
+        with:
+          version: nightly
+          neovim: true
       - run: cargo test --all-features
