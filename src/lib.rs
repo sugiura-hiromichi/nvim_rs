@@ -1,4 +1,4 @@
-#![allow(unused_variables,unused_imports, dead_code, unreachable_code)]
+#![allow(unused_variables, unused_imports, dead_code, unreachable_code)]
 use nvim_oxi::api::get_option_value;
 use nvim_oxi::api::opts::OptionOpts;
 use nvim_oxi::api::set_option_value;
