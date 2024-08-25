@@ -11,7 +11,7 @@ jobs:
       - uses: actions-rust-lang/setup-rust-toolchain@v1
       - uses: rhysd/action-setup-vim@v1
         with:
-          version: nightly
+          version: v0.10.0
           neovim: true
       - run: cargo build
-      - run: cargo test --all-features
+      - run: cargo test
