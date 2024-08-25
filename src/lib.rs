@@ -6,6 +6,7 @@ use nvim_oxi::api::StringOrListOfStrings;
 use nvim_oxi::Object;
 use nvim_oxi::ObjectKind;
 
+#[nvim_oxi::plugin]
 fn o_o() -> Result<(), nvim_oxi::api::Error,> {
 	let opts = OptionOpts::builder();
 	let light = "light".to_object();
@@ -19,7 +20,10 @@ mod tests {
 
 	use super::*;
 
-	#[nvim_oxi::test]
+	#[nvim_oxi::test(cmd = "lua print'🫠entered nvim instance'")]
+	fn empty_oxi_test() {}
+
+	//	#[nvim_oxitest]
 	fn o_o_test() -> Result<(), nvim_oxi::api::Error,> {
 		o_o()?;
 		assert_eq!(
